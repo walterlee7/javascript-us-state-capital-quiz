@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript U.S. State Capitol Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="title-wrapper">
+        <p class="title">JavaScript U.S. State Capital</p>
+    </div>
+    <div class="gamewindow" style="margin-top: 0px; min-height: 500px;">
+        <div id="gamewrapper" style="position: relative; background-color: #deded7; width: 100%; min-height: 500px;">
+
+            <div id="HUD">
+                <span id="score"></span>
+                <span id="timer"></span>
+                <span id="questionCount"></span>
+            </div>
+            <div class="q-header">What is the capital of Alabama?</div>
+            <div class="q-wrapper" style="padding-left:20px;">...</div>
+        </div>
+    </div>
+    <div id="optionsRight" style="padding-right: 50px; clear: both;">
+        <span>
+            <!-- <input id="cbSoundOn" type="checkbox" name="cbSoundOn" checked="checked" /><label for="cbSoundOn">Sound
+                On</label> -->
+        </span>
+
+        <span>&nbsp;&nbsp;
+            <a onclick="startGame()" id="restart" style="cursor: pointer;">Restart</a>
+        </span>
+        <div id="pnlRestart">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
