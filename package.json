@@ -1,0 +1,23 @@
+{
+    "name": "js-us-state-quiz",
+    "version": "1.0.0",
+    "description": "This is a U.S. state capital quiz in JavaScript/jQuery.",
+    "main": "index.js",
+    "scripts": {
+        "deploy": "gh-pages -d build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/walterlee7/javascript-us-state-capital-quiz.git"
+    },
+    "keywords": [],
+    "author": "Walter Lee",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/walterlee7/javascript-us-state-capital-quiz/issues"
+    },
+    "homepage": "https://walterlee7.github.com/javascript-us-state-capital-quiz",
+    "devDependencies": {
+        "gh-pages": "^2.0.1"
+    }
+}

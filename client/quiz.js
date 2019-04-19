@@ -214,7 +214,7 @@ function constructQuestionPanel(q) {
     }
 
     if (q.questionLayout == 1) {
-        var bHtml = '<div id="divTextAfter"></div><div id="btnPrevious" class="btnBrowse" style="float:left"><<</div><div id="btnNext" class="btnBrowse" style="float:left;margin-left:2em;">>></div>'
+        var bHtml = '<div id="divTextAfter"></div><div id="btnPrevious" class="btnBrowse" style="float:left;margin-right:2em;"><<</div><div id="btnNext" class="btnBrowse" style="float:left; margin-right:3.3em;">>></div>'
         // aHtml = '<div class="a-wrapper qi">' + aHtml + bHtml + '</div><div class="q-img q-img1"><img id="theImg" src="' + quizImgDir + qImage + '"/></div></div>'
 
         aHtml = '<div class="a-wrapper qi">' + aHtml + bHtml + '</div>'
@@ -412,14 +412,14 @@ function clearScore() {
     correctClicks = 0;
     wrongClicks = 0;
     totalClicks = 0;
-    $("#score").html("0%");
+    $("#score").html("Score: 0%");
 }
 
 function updateScore() {
 
     score = Math.round(correctClicks / totalClicks * 100)
     if (!isNaN(score) && score >= 0) {
-        $("#score").html(score + "%");
+        $("#score").html("Score: " + score + "%");
     } else {
         $("#score").html("");
     }
@@ -469,8 +469,8 @@ function getDisplayName(cleanText) {
 function startTimer() {
 
     start = new Date;
-    $('#timer').html(' | 0:00');
-    $('#score').html('0%');
+    $('#timer').html('0:00');
+    $('#score').html('Score: 0%');
     gameTime = setInterval(function () {
         gameDuration = new Date - start;
         totalSeconds = Math.round(gameDuration / 1000);
@@ -483,7 +483,7 @@ function startTimer() {
 
         newTime = minutes + ":" + seconds;
 
-        $('#timer').html(' | ' + newTime);
+        $('#timer').html(newTime);
     }, 1000);
 
 }
