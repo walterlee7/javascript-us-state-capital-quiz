@@ -1,5 +1,3 @@
-var quizImgDir = "/images";
-var imageHeight = 60;
 var container;
 var arrQuestions = [];
 var currentQuestion = 0;
@@ -27,31 +25,6 @@ var q;
 var clickTrans;
 var usingTouch;
 
-
-function setLayoutValues() {
-
-    var gw = $("#gameWrapper").width();
-
-    if (gw < 850) {
-        rowSize = 4;
-
-    }
-
-    if (gw < 755) {
-        rowSize = 3;
-
-    }
-
-    if (gw < 600) {
-        rowSize = 3;
-
-    }
-
-    cellWidth = (($("#gameWrapper").width() - 40) / rowSize);
-
-
-
-}
 
 $(document).ready(function () {
 
@@ -82,7 +55,7 @@ function saveHighScore() {
 
 function setupGame() {
 
-    hideCompletion();
+    // hideCompletion();
     stopTimer();
     clearScore();
     $("#gameWrapper").html("");
@@ -178,7 +151,7 @@ function startGame() {
 }
 
 function nextQuestion() {
-    // arrQuestions = shuffle(arrQuestions);
+    arrQuestions = shuffle(arrQuestions);
     console.log('Showing question ' + currentQuestion)
     q = arrQuestions[currentQuestion];
     constructQuestionPanel(q)
@@ -427,42 +400,42 @@ function updateScore() {
 
 // utilities
 
-Array.prototype.remove = function () {
-    var what, a = arguments, L = a.length, ax;
-    while (L && this.length) {
-        what = a[--L];
-        while ((ax = this.indexOf(what)) !== -1) {
-            this.splice(ax, 1);
-        }
-    }
-    return this;
-};
+// Array.prototype.remove = function () {
+//     var what, a = arguments, L = a.length, ax;
+//     while (L && this.length) {
+//         what = a[--L];
+//         while ((ax = this.indexOf(what)) !== -1) {
+//             this.splice(ax, 1);
+//         }
+//     }
+//     return this;
+// };
 
-Array.prototype.removeFirst = function () {
-    var what, a = arguments, L = a.length, ax;
+// Array.prototype.removeFirst = function () {
+//     var what, a = arguments, L = a.length, ax;
 
-    while (L && this.length) {
-        what = a[--L];
-        while ((ax = this.indexOf(what)) !== -1) {
-            this.splice(ax, 1);
-            return this;
-        }
-    }
-    return this;
-};
+//     while (L && this.length) {
+//         what = a[--L];
+//         while ((ax = this.indexOf(what)) !== -1) {
+//             this.splice(ax, 1);
+//             return this;
+//         }
+//     }
+//     return this;
+// };
 
 
-function getCleanName(dirtyText) {
-    var cleanText = dirtyText.replace(/\ /g, '_');
+// function getCleanName(dirtyText) {
+//     var cleanText = dirtyText.replace(/\ /g, '_');
 
-    cleanText = cleanText.replace(/[|&;$%@"<>()+,.:#]/g, "");
-    return cleanText;
-}
+//     cleanText = cleanText.replace(/[|&;$%@"<>()+,.:#]/g, "");
+//     return cleanText;
+// }
 
-function getDisplayName(cleanText) {
-    var displayText = cleanText.replace("_", " ");
-    return displayText;
-}
+// function getDisplayName(cleanText) {
+//     var displayText = cleanText.replace("_", " ");
+//     return displayText;
+// }
 
 
 
@@ -493,25 +466,24 @@ function stopTimer() {
     clearTimeout(gameTime);
 }
 
-function hideCompletion() {
+// function hideCompletion() {
+//     $("#completion").hide();
 
-    $("#completion").hide();
+// }
 
-}
+// function showCompletion() {
 
-function showCompletion() {
+//     $("#completion").show();
 
-    $("#completion").show();
-
-    if ($.cookie("hasAccount") == "true") {
-        console.log("game complete")
+//     if ($.cookie("hasAccount") == "true") {
+//         console.log("game complete")
 
 
-        $("#nickname").val($.cookie("nickname"))
+//         $("#nickname").val($.cookie("nickname"))
 
-    }
+//     }
 
-}
+// }
 
 
 
