@@ -1,5 +1,3 @@
-var quizImgDir = "/images";
-var imageHeight = 60;
 var container;
 var arrQuestions = [];
 var currentQuestion = 0;
@@ -27,31 +25,6 @@ var q;
 var clickTrans;
 var usingTouch;
 
-
-function setLayoutValues() {
-
-    var gw = $("#gameWrapper").width();
-
-    if (gw < 850) {
-        rowSize = 4;
-
-    }
-
-    if (gw < 755) {
-        rowSize = 3;
-
-    }
-
-    if (gw < 600) {
-        rowSize = 3;
-
-    }
-
-    cellWidth = (($("#gameWrapper").width() - 40) / rowSize);
-
-
-
-}
 
 $(document).ready(function () {
 

@@ -19,5 +19,6 @@
     "homepage": "https://walterlee7.github.com/javascript-us-state-capital-quiz",
     "devDependencies": {
         "gh-pages": "^2.0.1"
-    }
+    },
+    "dependencies": {}
 }
