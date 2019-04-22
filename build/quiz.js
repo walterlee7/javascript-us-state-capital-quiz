@@ -151,7 +151,9 @@ function startGame() {
 }
 
 function nextQuestion() {
-    arrQuestions = shuffle(arrQuestions);
+
+    // arrQuestions = shuffle(arrQuestions);
+
     console.log('Showing question ' + currentQuestion)
     q = arrQuestions[currentQuestion];
     constructQuestionPanel(q)
