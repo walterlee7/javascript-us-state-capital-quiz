@@ -172,6 +172,7 @@ function constructQuestionPanel(q) {
     var qText = q.qText;
     var qImage = q.image;
 
+    console.log('175 ' + q);
     console.log(q.arrAnswers);
     console.log(qText)
     var aHtml = "";
@@ -274,12 +275,19 @@ function constructQuestionPanel(q) {
         var item = $(this);
         var thisId = item.attr("id");
 
-        arrQuestions[currentQuestion].arrAnswers[thisId].clicked = 1;
-        //console.log(item)
+        console.log(currentQuestion);
+        console.log(arrQuestions.length);
+        console.log(arrQuestions[currentQuestion]);
+
+        // arrQuestions[currentQuestion].arrAnswers[thisId].clicked = 1;
+
+        console.log('item ' + item)
+        console.dir(item);
         //console.log(thisId + " " + corrId)
         totalClicks++;
         if (arrQuestions[currentQuestion].answered == 0) {
-
+            console.log('corrId ' + corrId);
+            console.log('thisId ' + thisId);
             if (corrId == thisId) {
 
                 arrQuestions[currentQuestion].answered = 1;
